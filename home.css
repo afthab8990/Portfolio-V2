@@ -1,0 +1,288 @@
+.invert-btn{
+    background: none;
+    border: none;
+    height: 90%;
+    width: auto;
+}
+
+.home{
+    background-color: var(--color-dark);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--b-color);
+    border-bottom: none;
+    
+}
+
+.home p{
+    font-family: monospace;
+    margin: 8px;
+    font-size: 20px;
+}
+
+
+
+.details .name{
+    font-family: 'ClashDisplay-Semi';
+    font-size: 120px;
+    margin: 8px;
+}
+
+.addi{
+    flex: 1;
+}
+
+/* Home end */
+
+/* About start */
+.about{
+    background-color: var(--color-dark);
+    display: flex;
+    min-height: 100vh;
+    align-items: start;
+    border: 1px solid var(--b-color);
+    border-bottom: none;
+
+}
+
+.hero-about{
+    
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 8px 16px 8px 16px;
+    text-align: justify;
+}
+
+.hero-about p{
+    font-size: medium;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  
+}
+
+.skill-card {
+  background-color: var(--color-dark);
+  outline: 1px solid var(--b-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+
+}
+
+.skill-card:hover{
+     -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+}
+
+.skill-card img{
+    width: 25%;
+    height: auto;
+}
+/* About End */
+
+/* Services start */
+.services{
+    background-color: var(--color-dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    border: 1px solid var(--b-color);
+    border-bottom: none;
+}
+
+.serv-sec{
+    display: flex;
+    background-color: var(--color-dark);
+    width: 55%;
+}
+
+.serv{
+    background-color: var(--color-dark);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
+    padding: 8px 16px 8px 16px;
+    justify-content: center; /* centers grid horizontally */
+  align-content: center;
+}
+
+.cards{
+    background-color: var(--color-dark);
+    width: 220px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 16px;
+    align-items: center;
+    outline: 1px solid var(--b-color);
+}
+
+
+.cards:hover{
+    -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/* End services */
+
+/* start projects */
+
+.projects{
+    background-color: var(--color-dark);
+    min-height: 100vh;
+    display: flex;
+    border: 1px solid var(--b-color);
+    border-bottom:none ;
+    justify-content: start;
+    align-items: start;
+}
+
+.pros{
+    background-color: var(--color-dark);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 8px 16px 8px 16px;
+    width: 55%;
+}
+
+
+.pro-det{
+    outline: 1px solid var(--b-color);
+    padding: 8px;
+    background-color: var(--color-dark);
+    text-align: justify;
+}
+
+.pro-card {
+    border: 1px solid var(--b-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-dark);
+    overflow: hidden;
+}
+
+.pro-card:hover{
+     -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.pro-pic {
+    width: 100%;
+    aspect-ratio: 16 / 10; 
+    overflow: hidden;
+}
+
+.pro-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pro-stack img{
+    padding: 4px 8px;
+    height: 30px;
+    width: auto;
+}
+
+/* Projects end */
+
+/* Contact start */
+
+.contact{
+    background-color: var(--color-dark);
+    display: flex;
+    min-height: 100vh;
+    align-items: start;
+    border: 1px solid var(--b-color);
+    border-bottom: none;
+}
+
+.c-form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.c-form {
+  max-width: 500px;
+  padding: 8px 16px;
+  text-align: start;
+  justify-content: start;
+}
+
+.c-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--color-light);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-light);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid var(--b-color);
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input, textarea, .c-form button {
+  width: 100%;
+  background-color: var(--color-dark);
+  padding: 12px 16px;
+  border: 1px solid var(--b-color);
+  font-size: 15px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.c-form button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  outline: 1px solid var(--b-color);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.c-form button:hover {
+     -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/* contact end */
+

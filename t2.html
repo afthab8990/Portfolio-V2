@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Portfolio</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="common.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+      <div class="time">
+        <p>12 : 04 am</p>
+      </div>
+      <div class="place">Based in : Kerala, India</div>
+      <div class="menu">
+        <svg class="menu_ic pointers" width="35px" height="35px" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 15H19M5 9H19" stroke="#d9d9d9" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </header>
+  <div class="home screen">
+    <div class="circle pointers">
+      <svg class="arrow" width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M5.46967 5.46967C5.76256 5.17678 6.23744 5.17678 6.53033 5.46967L17.25 16.1893L17.25 9C17.25 8.58579 17.5858 8.25 18 8.25C18.4142 8.25 18.75 8.58579 18.75 9L18.75 18C18.75 18.4142 18.4142 18.75 18 18.75L9 18.75C8.58579 18.75 8.25 18.4142 8.25 18C8.25 17.5858 8.58579 17.25 9 17.25L16.1893 17.25L5.46967 6.53033C5.17678 6.23744 5.17678 5.76256 5.46967 5.46967Z"
+          fill="#ff3535" />
+      </svg>
+    </div>
+
+
+    <section class="land">
+      <div class="name"><p>AFTHAB ANSARI</p></div>
+      <div class="role">
+        <p id="dev">PYTHON DEVELOPER</p>
+        <p id="tex">
+          This was designed using the continuous effort of hand and brain coordination and a ton of time as a resource
+        </p>
+      </div>
+    </section>
+
+    <section class="menu_list">
+      <p class="split pointers pager" data-value="1">HOME</p>
+      <p class="split pointers pager" data-value="2">ABOUT</p>
+      <p class="split pointers pager" data-value="3">WORKS</p>
+      <p class="split pointers pager" data-value="4">CONTACT</p>
+      <p class="split pointers pager" data-value="5">MORE</p>
+    </section>
+  </div>
+<!-- 
+  <div class="about screen"></div> -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="fns.js"></script>
+<script src="anim.js"></script>
+<script src="pages.js"></script>
+</html>
