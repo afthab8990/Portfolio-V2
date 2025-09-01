@@ -23,6 +23,10 @@
     font-size: 20px;
 }
 
+.home .details{
+    display: flex;
+}
+
 .scroller{
     font-family: 'Outfit-Regular';
     font-size: 45px;
@@ -62,7 +66,7 @@
     background-color: var(--color-dark);
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 80%;
     padding: 8px 16px 8px 16px;
     text-align: justify;
 }
@@ -72,6 +76,31 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.exp{
+    border-top: 2px solid var(--color-light);
+    border-bottom: 2px solid var(--color-light);
+
+}
+
+.exp-det{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.exp-place{
+    display: flex;
+}
+
+.exp-year{
+    align-self: flex-end;
+}
+
+.exp-place p{
+
 }
 
 .skill-grid {

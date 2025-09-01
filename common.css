@@ -94,6 +94,10 @@ body.inverted .icons{
     filter: invert(1) hue-rotate(180deg);
 }
 
+body.inverted .home p{
+    color: white;
+}
+
 body{
     max-width: 100vw;
     background-color: var(--color-dark);
@@ -130,15 +134,14 @@ h1{
     font-family: 'ClashDisplay-Semi';
 }
 
-h1{
-    margin: 8px 0px;
+h2{
+    margin: 8px 4px;
     font-family: 'ClashDisplay-Regular';
 }
 
 button{
     font-family: 'Outfit-Regular';
 }
-
 
 .logo{
     background: none;
@@ -306,6 +309,44 @@ footer ul{
 
 .flow:hover {
     color: var(--color-light); 
+}
+
+.flow-inv {
+    font-size: 16px;
+    padding: 4px 0px;
+    display: flex;
+    justify-content: start;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-light);
+    color: var(--color-light);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s;
+}
+
+.flow-inv::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-light);
+    bottom: -200%; 
+    left: 0;
+    width: 100%;
+    height: 200%;  
+    z-index: -1;    
+    transition: bottom 0.5s ease;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+}
+
+.flow-inv:hover::before {
+    bottom: 0; 
+}
+
+.flow-inv:hover {
+    color: var(--color-dark); 
 }
 
 .soc{

@@ -13,11 +13,12 @@ function loadPage() {
             let setter_page = toSentenceCase(text);
             console.log(setter_page)
             if (setter_page == "Welcome"){
-                title.innerHTML= `<p>Welocome</p`
+                title.innerHTML= `<p>Welocome</p>`
                 setter_page = "home"
+            }else{
+                title.innerHTML= `<p>${setter_page}</p`
             }
             console.log(setter_page);
-            title.innerHTML= `<p>${setter_page}</p`
              title.style.animation = "none";
             void title.offsetWidth; 
             title.style.animation = "loader 2s ease-in-out";
