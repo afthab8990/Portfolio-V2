@@ -70,10 +70,12 @@
 }
 
 
-
+::selection {
+    background-color: #ff8635; 
+}
 
 :root{
-    --color-light : black;
+    --color-light : rgb(26, 26, 26);
     --color-dark : white;
     --b-color: #cecece;
 }
@@ -137,6 +139,7 @@ button{
     font-family: 'Outfit-Regular';
 }
 
+
 .logo{
     background: none;
     display: flex;
@@ -198,9 +201,13 @@ button{
     animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
+#pg{
+    cursor: pointer;
+}
 
 
 .heading{
+    left: 0;
     width: 25%;
     display: flex;
     justify-content: start;
@@ -208,8 +215,10 @@ button{
     position: sticky; 
     top: 10vh;        
     z-index: 1;   
+
     font-family: 'ClashDisplay-semi';
     font-size: 60px;
+    transition: 0.3s;
 }
 
 .heading p{
@@ -260,7 +269,7 @@ footer ul{
     list-style-type: none;
 }
 
-.sect button{
+.flow {
     font-size: 16px;
     padding: 4px 0px;
     display: flex;
@@ -268,8 +277,35 @@ footer ul{
     background: none;
     border: none;
     border-bottom: 2px solid var(--color-dark);
-    width: 75%;
+    width: 80%;
     color: var(--color-dark);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s;
+}
+
+.flow::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-dark);
+    bottom: -200%; 
+    left: 0;
+    width: 100%;
+    height: 200%;  
+    z-index: -1;    
+    transition: bottom 0.5s ease;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+}
+
+.flow:hover::before {
+    bottom: 0; 
+}
+
+.flow:hover {
+    color: var(--color-light); 
 }
 
 .soc{
@@ -279,16 +315,9 @@ footer ul{
 }
 
 .soc a{
-    font-size: 16px;
-    text-decoration: none;
-    padding: 4px 0px;
     display: flex;
-    justify-content: start;
-    background: none;
-    border: none;
-    border-bottom: 2px solid var(--color-dark);
-    width: 75%;
-    color: var(--color-dark);
+    justify-content: space-between;
+    padding-right: 4px;
 }
 
 footer .name{

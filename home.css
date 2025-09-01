@@ -6,22 +6,31 @@
 }
 
 .home{
-    background-color: var(--color-dark);
+    background: url(gif.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
-    border: 1px solid var(--b-color);
+    color: var(--color-dark);
     border-bottom: none;
-    
 }
 
 .home p{
-    font-family: monospace;
     margin: 8px;
     font-size: 20px;
 }
 
+.scroller{
+    font-family: 'Outfit-Regular';
+    font-size: 45px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 25%;
+}
 
 
 .details .name{
@@ -47,6 +56,7 @@
 
 }
 
+
 .hero-about{
     
     background-color: var(--color-dark);
@@ -59,6 +69,9 @@
 
 .hero-about p{
     font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .skill-grid {
@@ -75,7 +88,6 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
-
 }
 
 .skill-card:hover{
@@ -109,9 +121,9 @@
 .serv{
     background-color: var(--color-dark);
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
+    grid-template-columns: repeat(3, 1fr); 
     padding: 8px 16px 8px 16px;
-    justify-content: center; /* centers grid horizontally */
+    justify-content: center; 
   align-content: center;
 }
 
@@ -126,6 +138,8 @@
     align-items: center;
     outline: 1px solid var(--b-color);
 }
+
+
 
 
 .cards:hover{

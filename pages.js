@@ -1,8 +1,5 @@
-let load = document.querySelectorAll(".pager");
+let load = document.querySelectorAll("#pg");
 let title = document.getElementById("title")
-
-
-
 
 function toSentenceCase(str) {
     if (!str) return "";
@@ -12,8 +9,13 @@ function toSentenceCase(str) {
 function loadPage() {
     load.forEach((el) => {
         el.addEventListener("click", (e) => {
-            let text = e.currentTarget.textContent.trim();
+            let text = e.currentTarget.dataset.page;
             let setter_page = toSentenceCase(text);
+            console.log(setter_page)
+            if (setter_page == "Welcome"){
+                title.innerHTML= `<p>Welocome</p`
+                setter_page = "home"
+            }
             console.log(setter_page);
             title.innerHTML= `<p>${setter_page}</p`
              title.style.animation = "none";
@@ -25,8 +27,6 @@ function loadPage() {
                     targetElement.scrollIntoView({ behavior: "smooth" }); 
                 }    
             }, 1000); // 2000ms = 2 seconds
-           
-            
         });
     });
 }
