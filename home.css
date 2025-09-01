@@ -78,7 +78,16 @@
     justify-content: flex-end;
 }
 
+.punch{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .exp{
+    display: flex;
+    padding: 0px 4px;
+    flex-direction: column;
     border-top: 2px solid var(--color-light);
     border-bottom: 2px solid var(--color-light);
 
@@ -92,6 +101,7 @@
 }
 
 .exp-place{
+    padding: 8px 4px;
     display: flex;
 }
 
@@ -190,6 +200,26 @@
     align-items: start;
 }
 
+.pro-sec{
+    width: 80%;
+}
+
+.pro-set{
+    display: flex;
+    padding: 0px 4px;
+    flex-direction: column;
+    border-top: 2px solid var(--color-light);
+    border-bottom: 2px solid var(--color-light);
+
+
+}
+
+.pro{
+    border-bottom: 2px solid var(--color-light);
+    padding: 16px 8px;
+}
+
+/* 
 .pros{
     background-color: var(--color-dark);
     display: grid;
@@ -238,7 +268,7 @@
     padding: 4px 8px;
     height: 30px;
     width: auto;
-}
+} */
 
 /* Projects end */
 
