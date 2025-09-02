@@ -1,0 +1,44 @@
+.home{
+    background: none;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    color: var(--color-dark);
+    border-bottom: none;
+}
+
+.home p{
+    margin: 8px;
+    font-size: 20px;
+}
+
+.home .details{
+    display: flex;
+}
+
+.scroller{
+    font-family: 'Outfit-Regular';
+    font-size: 45px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 25%;
+}
+
+
+.details .name{
+    font-family: 'ClashDisplay-Semi';
+    font-size: 120px;
+    margin: 8px;
+}
+
+.addi{
+    flex: 1;
+}
+
+/* Home end */
+
+
+/* contact end */
+

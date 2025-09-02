@@ -1,0 +1,456 @@
+/* Clash display */
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('../ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Regular.otf') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('../ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Bold.otf') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-EL';
+  src: url('../ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Extralight.otf') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('../ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Light.otf') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClashDisplay-Semi';
+  src: url('../ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Semibold.otf') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Outfit */
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url('../Outfit_Complete/Outfit_Complete/Fonts/OTF/Outfit-ExtraLight.otf') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit-Bold';
+  src: url('../Outfit_Complete/Outfit_Complete/Fonts/OTF/Outfit-Bold.otf') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* panchang */
+@font-face {
+  font-family: 'Panchang-Regular';
+  src: url('../Panchang_Complete/Panchang_Complete/Fonts/OTF/Panchang-Regular.otf') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Semi';
+  src: url('../Panchang_Complete/Panchang_Complete/Fonts/OTF/Panchang-Semibold.otf') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Switzer */
+@font-face {
+  font-family: 'Switzer-Bold';
+  src: url('../Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Bold.otf') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer-Regular';
+  src: url('../Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Regular.otf') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+
+::selection {
+    background-color: #ff8635; 
+}
+
+:root{
+    --color-light : rgb(0, 0, 0);
+    --color-dark : white;
+    --b-color: #cecece;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.inverted {
+  --color-light : white;
+  --color-dark : rgb(0, 0, 0);
+  --b-color:#888888;
+}
+
+body.inverted .icons{
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.inverted .home p, footer p{
+    color: white;
+}
+
+body{
+    max-width: 100vw;
+    background: url(../gif.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family:'Outfit-Regular';
+    color: var(--color-light);
+}
+
+/* Navbar */
+header{
+    background-color: var(--color-dark);
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    outline: 1px solid #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     z-index: 1000;
+}
+
+header div{
+    flex: 1;
+    height: 100%;
+}
+
+section {
+    scroll-margin-top: 10vh;
+    padding: 16px 8px;
+}
+
+h1{
+    margin: 8px 0px;
+    font-family: 'ClashDisplay-Semi';
+}
+
+h2{
+    margin: 8px 4px;
+    font-family: 'ClashDisplay-Regular';
+}
+
+button{
+    font-family: 'Outfit-Regular';
+}
+
+.logo{
+    background: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--color-light);
+    padding: 0px 8px;
+
+}
+
+.logo p{
+    color: var(--color-light);
+    margin: 0;
+    font-family: 'Panchang-Semi';
+    font-size: 32px;
+
+}
+
+.navi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 8px;
+}
+
+.pager{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    outline: 1px solid var(--b-color);
+    border: none;
+    
+}
+
+.pager::before{
+    content: "";
+    background-color: var(--color-dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+}
+
+
+.pager:hover{
+    -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+#pg{
+    cursor: pointer;
+}
+
+
+.heading{
+    width: 25%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: sticky; 
+    top: 10vh;        
+    z-index: 1;   
+
+    font-family: 'ClashDisplay-semi';
+    font-size: 60px;
+    transition: 0.3s;
+}
+
+.heading p{
+    margin: 0;
+}
+
+.invert-btn{
+    background: none;
+    border: none;
+    height: 90%;
+    width: auto;
+}
+
+
+#title{
+	visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-light);
+    position: fixed;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-dark);
+    font-size: 80px;
+    font-family: 'ClashDisplay-Semi'; 
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: var(--color-light);
+    
+    color: var(--color-dark);
+
+}
+
+.foot{
+    display: flex;
+    justify-content: end;
+}
+
+.foot h4{
+    color: var(--b-color);
+    font-family: 'ClashDisplay-Regular';
+}
+
+.sect{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+.flow {
+    font-size: 16px;
+    padding: 4px 0px;
+    display: flex;
+    justify-content: start;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-dark);
+    width: 80%;
+    color: var(--color-dark);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s;
+}
+
+.flow::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-dark);
+    bottom: -200%; 
+    left: 0;
+    width: 100%;
+    height: 200%;  
+    z-index: -1;    
+    transition: bottom 0.3s ease;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+}
+
+.flow:hover::before {
+    bottom: 0; 
+}
+
+.flow:hover {
+    color: var(--color-light); 
+}
+
+.flow-inv {
+    font-size: 16px;
+    display: flex;
+    justify-content: start;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-light);
+    color: var(--color-light);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s;
+}
+
+.flow-inv::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-light);
+    bottom: -200%; 
+    left: 0;
+    width: 100%;
+    height: 200%;  
+    z-index: -1;    
+    transition: bottom 0.3s ease;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+}
+
+.flow-inv:hover::before {
+    bottom: 0; 
+}
+
+.flow-inv:hover {
+    color: var(--color-dark); 
+}
+
+.str{
+    font-size: 16px;
+    display: flex;
+    justify-content: start;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-light);
+    color: var(--color-light);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s;
+}
+
+.str::before{    
+    content: "";
+    position: absolute;
+    background-color: var(--color-light);
+    bottom: -200%; 
+    left: 0;
+    width: 100%;
+    height: 200%;  
+    z-index: -1;    
+    transition: bottom 0.3s ease;
+}
+
+.str:hover{
+    color: var(--color-dark); 
+
+}
+
+.str:hover::before{
+    bottom: 0; 
+
+}
+
+.soc{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.soc a{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 4px;
+}
+
+footer .name{
+    color: var(--color-dark);
+    font-family: 'Panchang-Semi';
+    font-size: 120px;
+    margin: 8px;
+}
+
+.end p{
+    color: var(--color-dark);
+}
+
+@keyframes loader{
+    0%{
+        top: 100vh;
+        visibility: visible;
+    }
+
+    50%{
+        top: 0;
+    }
+
+    100%{
+        top: -100vh;
+    }
+}
+

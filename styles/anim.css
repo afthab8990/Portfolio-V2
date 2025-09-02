@@ -1,0 +1,82 @@
+/* Borders */
+/* var(--color-light) */
+@-webkit-keyframes shadow-pop-br {
+  0% {
+    -webkit-box-shadow: 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light);
+            box-shadow: 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light);
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px 1px var(--color-light), 2px 2px var(--color-light), 3px 3px var(--color-light), 4px 4px var(--color-light), 5px 5px var(--color-light), 6px 6px var(--color-light), 7px 7px var(--color-light), 8px 8px var(--color-light);
+            box-shadow: 1px 1px var(--color-light), 2px 2px var(--color-light), 3px 3px var(--color-light), 4px 4px var(--color-light), 5px 5px var(--color-light), 6px 6px var(--color-light), 7px 7px var(--color-light), 8px 8px var(--color-light);
+    -webkit-transform: translateX(-8px) translateY(-8px);
+            transform: translateX(-8px) translateY(-8px);
+  }
+}
+
+@keyframes shadow-pop-br {
+  0% {
+    -webkit-box-shadow: 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light);
+            box-shadow: 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light), 0 0 var(--color-light);
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px 1px var(--color-light), 2px 2px var(--color-light), 3px 3px var(--color-light), 4px 4px var(--color-light), 5px 5px var(--color-light), 6px 6px var(--color-light), 7px 7px var(--color-light), 8px 8px var(--color-light);
+            box-shadow: 1px 1px var(--color-light), 2px 2px var(--color-light), 3px 3px var(--color-light), 4px 4px var(--color-light), 5px 5px var(--color-light), 6px 6px var(--color-light), 7px 7px var(--color-light), 8px 8px var(--color-light);
+    -webkit-transform: translateX(-8px) translateY(-8px);
+            transform: translateX(-8px) translateY(-8px);
+  }
+}
+
+.shadow-pop-br {
+	-webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+/* entrance */
+
+@-webkit-keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+@keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+

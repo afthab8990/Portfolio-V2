@@ -1,0 +1,97 @@
+
+/* About start */
+.about{
+    background-color: var(--color-dark);
+    display: flex;
+    min-height: 100vh;
+    align-items: start;
+    border: 1px solid var(--b-color);
+    border-bottom: none;
+}
+
+
+.hero-about{
+    
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 8px 16px 8px 16px;
+    text-align: justify;
+}
+
+.hero-about p{
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.punch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.punch span{
+    align-self: center;
+}
+
+.exp{
+    display: flex;
+    padding: 0px 4px;
+    flex-direction: column;
+    /* border-top: 2px solid var(--color-light); */
+    border-bottom: 2px solid var(--color-light);
+
+}
+
+.exp-det{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.exp-place{
+    padding: 8px 4px;
+    display: flex;
+}
+
+.exp-year{
+    align-self: flex-end;
+}
+
+.exp-place p{
+
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  
+}
+
+.skill-card {
+  background-color: var(--color-dark);
+  outline: 1px solid var(--b-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+}
+
+.skill-card:hover{
+     -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+}
+
+.skill-card img{
+    width: 25%;
+    height: auto;
+}
+/* About End */
