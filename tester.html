@@ -5,88 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Permanent Stacked Headings</title>
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
+    .container {
+  width: 80%;         /* example container */
+  border: 1px solid #333;
+}
 
-    /* Fixed container to hold stacked headings */
-    .stacked-headings {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      z-index: 1000;
-      border-bottom: 2px solid #ccc;
-    }
-
-    .stacked-headings .heading {
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .section {
-      position: relative;
-    }
-
-    .heading {
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .image {
-      height: 100vh; /* large scrollable images */
-      background-size: cover;
-      background-position: center;
-    }
-
-    .img1 { background-image: url("https://picsum.photos/1000/700?random=1"); }
-    .img2 { background-image: url("https://picsum.photos/1000/700?random=2"); }
-    .img3 { background-image: url("https://picsum.photos/1000/700?random=3"); }
+.container p {
+  width: 100%;        /* take full container width */
+  white-space: nowrap; /* prevent breaking into new lines */
+  overflow: hidden;   /* hide if it overflows */
+  text-overflow: ellipsis; /* optional "..." if too long */
+  font-size: clamp(12px, 5vw, 32px); /* responsive scaling */
+}
   </style>
 </head>
 <body>
   
-  <!-- permanent stacked headings go here -->
-  <div class="stacked-headings" id="stacked"></div>
-
-  <div class="section">
-    <div class="heading">Heading 1</div>
-    <div class="image img1"></div>
-  </div>
-
-  <div class="section">
-    <div class="heading">Heading 2</div>
-    <div class="image img2"></div>
-  </div>
-
-  <div class="section">
-    <div class="heading">Heading 3</div>
-    <div class="image img3"></div>
-  </div>
-
-  <script>
-    const sections = document.querySelectorAll(".section");
-    const stackedContainer = document.getElementById("stacked");
-    const seen = new Set();
-
-    window.addEventListener("scroll", () => {
-      sections.forEach(section => {
-        const heading = section.querySelector(".heading");
-        const rect = section.getBoundingClientRect();
-
-        // When top of section hits top of viewport, add heading to stack
-        if (rect.top <= 0 && !seen.has(heading)) {
-          const clone = heading.cloneNode(true);
-          stackedContainer.appendChild(clone);
-          seen.add(heading);
-        }
-      });
-    });
-  </script>
+<div class="container">
+  <p>This text will scale with the container size without breaking.</p>
+</div>
 </body>
 </html>

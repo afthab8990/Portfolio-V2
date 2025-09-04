@@ -79,6 +79,22 @@
 }
 
 @font-face {
+  font-family: 'Switzer-Light';
+  src: url('../Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Regular.otf') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer-El';
+  src: url('../Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Regular.otf') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Switzer-Regular';
   src: url('../Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Regular.otf') format('woff2');
   font-weight: 400;
@@ -94,7 +110,7 @@
 
 :root{
     --color-light : rgb(0, 0, 0);
-    --color-dark : white;
+    --color-dark : rgb(255, 255, 255);
     --b-color: #cecece;
 }
 
@@ -130,11 +146,9 @@ body{
 
 /* Navbar */
 header{
-    background-color: var(--color-dark);
-    position: fixed;
+    background-color: none;
     width: 100%;
     height: 10vh;
-    outline: 1px solid #cecece;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,7 +161,6 @@ header div{
 }
 
 section {
-    scroll-margin-top: 10vh;
     padding: 16px 8px;
 }
 
@@ -162,7 +175,7 @@ h2{
 }
 
 button{
-    font-family: 'Outfit-Regular';
+    font-family: 'Switzer-regular';
 }
 
 .logo{
@@ -170,13 +183,12 @@ button{
     display: flex;
     justify-content: start;
     align-items: center;
-    color: var(--color-light);
     padding: 0px 8px;
 
 }
 
-.logo p{
-    color: var(--color-light);
+.navi p{
+    color: var(--color-dark);
     margin: 0;
     font-family: 'Panchang-Semi';
     font-size: 32px;
@@ -185,7 +197,7 @@ button{
 
 .navi{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -199,32 +211,15 @@ button{
 .pager{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     height: 100%;
     width: 90px;
-    color: var(--color-light);
-    background-color: var(--color-dark);
-    outline: 1px solid var(--b-color);
+    color: var(--color-dark);
+    background: none;
+    outline: none;
     border: none;
     
-}
-
-.pager::before{
-    content: "";
-    background-color: var(--color-dark);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    z-index: 1;
-}
-
-
-.pager:hover{
-    -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-    animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 #pg{
@@ -238,7 +233,7 @@ button{
     justify-content: start;
     align-items: start;
     position: sticky; 
-    top: 10vh;        
+    top: 0;        
     z-index: 1;   
 
     font-family: 'ClashDisplay-semi';

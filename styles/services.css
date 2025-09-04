@@ -6,16 +6,94 @@
     align-items: start;
     border: 1px solid var(--b-color);
     border-bottom: none;
-    padding: 0;
 }
+
 .serv-sec{
-    padding: 8px 0px;
+    padding: 8px 16px;
     display: flex;
     flex-direction: column;
     background-color: var(--color-dark);
     width: 80%;
     position: relative;
     }
+
+    
+.srvc{
+    height: 70vh;
+    position: relative;
+}
+
+.srvc-dete{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.srvc-img{
+    width:30% ;
+    height: 80%;
+}
+.srvc-img img{
+    border-radius: 10%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.srvc-head{
+    background-color: var(--color-dark);
+    border-bottom: 1px solid var(--b-color);
+    color: rgb(255, 60, 0);
+    padding: 0px 4px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: sticky; 
+    top: 0;       
+    z-index: 1;   
+    font-family: 'Switzer-Regular';
+    transition: 0.3s;
+}
+
+.srvc-head p{
+    margin: 4px;
+
+}
+
+.srvc-body{
+    height:50vh;
+    padding: 4px 8px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    font-family: monospace;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: var(--color-light);
+    
+}
+
+.srvc-body h1{
+    /* font-family:Arial, Helvetica, sans-serif; */
+    display: block;
+    
+    font-size: 40px;
+    font-family: 'Switzer-Regular';
+    /* mix-blend-mode: difference; */
+    
+}
+.srvc-body p{
+    
+    
+    text-align: justify;
+    /* mix-blend-mode: difference; */
+
+}
+/* End services */
 
 
 /* 
@@ -48,49 +126,3 @@
 .cards:hover{
     filter: invert(1) hue-rotate(180deg);
 } */
-
-.srvc{
-    height: 80vh;
-}
-
-.srvc-head{
-    background-color: var(--color-dark);
-    padding: 0px 4px;
-    color: var(--color-light);
-    display: flex;
-    justify-content: end;
-    align-items: start;
-    position: sticky; 
-    top: 10vh;        
-    z-index: 1;   
-    font-family: monospace;
-    transition: 0.3s;
-    /* border: solid var(--b-color); */
-    border-width: 0px 0px 2px 0px;
-}
-
-.srvc-body{
-    height:100%;
-    padding: 4px 8px;
-    background-color: var(--color-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    font-family: monospace;
-    text-transform: uppercase;
-}
-
-.srvc-body h1{
-
-    display: block;
-    width: 40%;
-    font-size: 40px;
-    font-family: 'Switzer-Regular';
-}
-.srvc-body p{
-    
-    width: 40%;
-    text-align: justify;
-}
-/* End services */
