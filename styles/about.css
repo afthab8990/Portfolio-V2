@@ -64,8 +64,8 @@
     align-self: flex-end;
 }
 
-.exp-place p{
-
+.exp-place sup{
+    color: var(--color-highlight);
 }
 
 .skill-grid {

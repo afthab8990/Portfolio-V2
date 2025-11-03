@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Permanent Stacked Headings</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mask Follow Cursor</title>
   <style>
+    html,body { height:100%; margin:0; }
     .container {
-  width: 80%;         /* example container */
-  border: 1px solid #333;
-}
+      height:100vh;
+      width:100vw;
+      background:orangered;
+      cursor: none;
 
-.container p {
-  width: 100%;        /* take full container width */
-  white-space: nowrap; /* prevent breaking into new lines */
-  overflow: hidden;   /* hide if it overflows */
-  text-overflow: ellipsis; /* optional "..." if too long */
-  font-size: clamp(12px, 5vw, 32px); /* responsive scaling */
-}
+      /* Mask (and webkit prefixed) - use an image and control position & size from JS */
+      -webkit-mask-image: radial-gradient(circle, #000 100%, transparent 100%);
+      mask-image: radial-gradient(circle, #000 100%, transparent 100%);
+
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+
+      /* Start at 0,0 so JS controls it */
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+
+      /* make size explicit (diameter). tweak to taste */
+      -webkit-mask-size: 300px 300px;
+      mask-size: 150px 150px;
+      overflow: hidden;
+    }
+
+    .container p { padding:2rem; color:white; line-height:1.7; }
   </style>
 </head>
 <body>
-  
-<div class="container">
-  <p>This text will scale with the container size without breaking.</p>
-</div>
+  <div id="cir" class="container">
+    <p>Move the mouse — the circular mask should follow the pointer exactly (not centered).</p>
+  </div>
+
+  <script>
+    const container = document.getElementById('cir');
+
+    function updateMaskPosition(clientX, clientY) {
+      // Get element position relative to the viewport
+      const rect = container.getBoundingClientRect();
+
+      // Convert viewport coords to element-local coords
+      const localX = clientX - rect.left;
+      const localY = clientY - rect.top;
+
+      // Set both non-prefixed and webkit-prefixed properties
+      container.style.maskPosition = `${localX }px ${localY}px`;
+      container.style.webkitMaskPosition = `${localX }px ${localY}px`;
+    }
+
+    // Use pointermove (works with touch & mouse) for better cross-device behavior
+    container.addEventListener('pointermove', (e) => {
+      // prevent default pointer capture issues
+      e.preventDefault();
+      updateMaskPosition(e.clientX, e.clientY);
+    });
+
+    // In case you scroll the page or element moves, recompute on scroll too
+    window.addEventListener('scroll', (e) => {
+      // If you want mask to stay under the pointer while scrolling, update once
+      // using the last known pointer if you'd stored it. For simplicity, clear mask.
+      // (Optional) you could store lastX/lastY on pointermove and call updateMaskPosition(lastX,lastY) here.
+    });
+  </script>
 </body>
 </html>

@@ -11,3 +11,4 @@ const observer = new IntersectionObserver((entries) => {
 const todoElements = document.querySelectorAll(".punchlines")
 
 todoElements.forEach(el => observer.observe(el))
+

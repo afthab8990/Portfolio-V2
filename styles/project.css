@@ -48,6 +48,10 @@
     display: flex;
 }
 
+.pro sup{
+    color: var(--color-highlight);
+}
+
 .pro-img{
     height: 60%;
 }

@@ -1,35 +1,28 @@
-gsap.registerPlugin(SplitText);
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
-// Menu window
-const menu_ic = document.querySelector(".menu");
-const menu_w = document.querySelector(".menu_list")
-const heads = document.querySelector("header")
-const menu_sv = document.querySelector(".menu_ic")
-const svgPath = menu_sv.querySelector("path");
+// Grab all .split elements
+document.querySelectorAll(".split").forEach((el) => {
+  // Split each element individually
+  let mySplitText = new SplitText(el, { type: "chars" });
+  let chars = mySplitText.chars;
 
-
-let mySplitText = new SplitText(".split", { type: "chars" });
-let chars = mySplitText.chars;
-
-menu_ic.addEventListener("click",()=>{
-    menu_w.classList.toggle("active")
-    
-
-    heads.classList.toggle("colorchange")
-
-      if (svgPath.getAttribute("stroke") === "#1e1e1e") {
-    svgPath.setAttribute("stroke", "#d9d9d9");
-  } else {
-    svgPath.setAttribute("stroke", "#1e1e1e");
-  }
-    gsap.from(chars,{
-    yPercent : 130,
-    duration : 0.6,
-
+  // Animate each set of characters
+  gsap.from(chars, {
+    yPercent: 130,
+    duration: 0.6,
+    stagger: {
+      amount: 0.8,
+    },
+    ease: "expo.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+    },
     onComplete: () => {
-    gsap.set(chars, { yPercent: 0 });
-  },
-    
-})
-})
+      gsap.set(chars, { yPercent: 0 });
+    },
+  });
+});

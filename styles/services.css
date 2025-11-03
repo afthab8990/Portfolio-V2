@@ -45,7 +45,7 @@
 .srvc-head{
     background-color: var(--color-dark);
     border-bottom: 1px solid var(--b-color);
-    color: rgb(255, 60, 0);
+    color: var(--color-highlight);
     padding: 0px 4px;
     display: flex;
     justify-content: start;
@@ -87,6 +87,7 @@
     
 }
 .srvc-body p{
+    color: var(--color-sec);
     
     
     text-align: justify;

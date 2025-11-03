@@ -1,8 +1,10 @@
 .home{
+    position: relative;
     background: none;
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     color: var(--color-dark);
     border-bottom: none;
@@ -15,6 +17,7 @@
 
 .home .details{
     display: flex;
+    align-items: center;
 }
 
 .scroller{
@@ -26,12 +29,52 @@
     width: 25%;
 }
 
+.expertise{
+    /* z-index: 2; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'ClashDisplay-semi';
+    position: absolute;
+    
+
+    color: var(--color-light);
+     background:var(--color-highlight);
+      cursor: none;
+
+      /* Mask (and webkit prefixed) - use an image and control position & size from JS */
+      /* -webkit-mask-image: radial-gradient(circle, #000 100%, transparent 100%); */
+      mask-image: radial-gradient(circle 250px at center, #000 99%, transparent 100%);
+
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+
+      /* Start at 0,0 so JS controls it */
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+
+      /* make size explicit (diameter). tweak to taste */
+      -webkit-mask-size: 500px 500px;
+      mask-size: 500px 500px;
+      overflow: hidden;
+}
+
+.expertise p{
+    font-size: 80px;
+    font-weight: 800;
+    text-align: justify;
+
+}
 
 .details .name{
     font-family: 'ClashDisplay-Semi';
     font-size: 120px;
     margin: 8px;
     mix-blend-mode: difference;
+    pointer-events: none;
 }
 
 .addi{
