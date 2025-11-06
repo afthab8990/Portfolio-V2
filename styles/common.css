@@ -105,7 +105,7 @@
 
 
 ::selection {
-    background-color: #ff8635; 
+    background-color: var(--color-highlight); 
 }
 
 :root{
@@ -141,7 +141,7 @@ body.inverted .home p, footer p{
 
 body{
     max-width: 100vw;
-    background: url(../gif.gif);
+    background: url(../bg/gif.gif);
     background-repeat: no-repeat;
     background-position: left;
     background-attachment: fixed;
@@ -193,7 +193,6 @@ button{
 }
 
 .navi button{
-    border-radius: inherit;
     pointer-events: all;
     color: var(--color-dark);
     margin: 0;
@@ -210,7 +209,7 @@ button{
 
 
 .navi{
-    gap: 5px;
+    
     pointer-events: none;
     width: 100%;
     height: 8vh;
@@ -298,6 +297,7 @@ button{
 
 
 footer{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: end;
