@@ -4,6 +4,7 @@
     background-color: var(--color-dark);
     display: flex;
     min-height: 100vh;
+    /* width: 100vw; */
     align-items: start;
     border: 1px solid var(--b-color);
     border-bottom: none;
@@ -16,18 +17,18 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    padding: 8px 16px 8px 16px;
+    /* padding: 8px 16px 8px 16px; */
     text-align: justify;
 }
 
 .hero-about p{
-    font-size: medium;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
 .punch{
+    font-size: clamp(24px,5vw,60px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,5 +94,15 @@
 .skill-card img{
     width: 25%;
     height: auto;
+}
+
+@media (max-width: 600px) {
+
+  .hero-about{
+    width: 100%;
+
+  }
+
+
 }
 /* About End */

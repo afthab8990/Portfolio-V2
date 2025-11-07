@@ -63,7 +63,7 @@
 }
 
 .expertise p{
-    font-size: 80px;
+    font-size: clamp(24px,5vw,80px);
     font-weight: 800;
     text-align: justify;
 
@@ -71,7 +71,7 @@
 
 .details .name{
     font-family: 'ClashDisplay-Semi';
-    font-size: 120px;
+    font-size: clamp(48px , 10vw, 120px);
     margin: 8px;
     mix-blend-mode: difference;
     pointer-events: none;
@@ -79,6 +79,25 @@
 
 .addi{
     flex: 1;
+}
+
+@media (max-width: 600px) {
+  .home .details{
+    flex-direction: column;
+
+  }
+  /* .expertise{
+    display: none;
+} */
+/* .expertise-marquee{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    background-color: var(--color-highlight);
+    color: white;
+} */
+
 }
 
 /* Home end */

@@ -1,15 +1,15 @@
 /* Services start */
 .services{
     background-color: var(--color-dark);
-    min-height: 100vh;
     display: flex;
+    min-height: 100vh;
     align-items: start;
     border: 1px solid var(--b-color);
     border-bottom: none;
 }
 
 .serv-sec{
-    padding: 8px 16px;
+    /* padding: 8px 16px; */
     display: flex;
     flex-direction: column;
     background-color: var(--color-dark);
@@ -24,6 +24,8 @@
 }
 
 .srvc-dete{
+    height:50vh;
+    gap: 80px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,14 +33,17 @@
 }
 
 .srvc-img{
+    flex: 1;
     width:30% ;
     height: 80%;
+    overflow: hidden;
 }
 .srvc-img img{
     border-radius: 10%;
     object-fit: cover;
+    object-position: center;
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 
@@ -63,8 +68,8 @@
 }
 
 .srvc-body{
-    height:50vh;
-    padding: 4px 8px;
+    flex: 2;
+    padding: 4px 8px ;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -87,11 +92,63 @@
     
 }
 .srvc-body p{
-    color: var(--color-sec);
+    color: var(--color-light);
     
     
     text-align: justify;
     /* mix-blend-mode: difference; */
+
+}
+
+@media (max-width: 600px) {
+
+  .srvc-dete{
+    flex-direction: column-reverse;
+    justify-content: start;
+    gap: 8px;
+    margin-top: 1px solid var(--color-sec);
+  }
+
+  .serv-sec{
+    width: 100%;
+  }
+
+  .srvc-body{
+    padding: 4px;
+    width: 100%;
+    
+
+  }
+  .srvc-head{
+    display: none;
+  }
+
+  .srvc-img{
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    overflow: hidden;
+  }
+.srvc-img img{
+    border-radius: 35px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%; 
+    
+}
+
+  /* .expertise{
+    display: none;
+} */
+/* .expertise-marquee{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    background-color: var(--color-highlight);
+    color: white;
+} */
 
 }
 /* End services */

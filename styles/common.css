@@ -103,7 +103,6 @@
 }
 
 
-
 ::selection {
     background-color: var(--color-highlight); 
 }
@@ -114,6 +113,9 @@
     --color-dark : rgb(255, 255, 255);
     --b-color: #cecece;
     --color-highlight : rgb(44, 111, 255);
+    --mobile: 600px;
+    --tablet: 992px;
+    --desktop: 1200px;
 }
 
 html {
@@ -128,7 +130,7 @@ body.inverted {
   --color-light : white;
   --color-dark : rgb(0, 0, 0);
   --b-color:#888888;
-  --color-sec:rgb(102, 102, 102);
+  --color-sub:rgb(102, 102, 102);
 }
 
 body.inverted .icons{
@@ -149,6 +151,7 @@ body{
     margin: 0;
     font-family:'Outfit-Regular';
     color: var(--color-light);
+    /* overflow: hidden; */
 }
 
 /* Navbar */
@@ -167,6 +170,7 @@ header div{
 
 section {
     padding: 16px 8px;
+    /* max-width: 100vw; */
 }
 
 h1{
@@ -258,10 +262,10 @@ button{
     align-items: start;
     position: sticky; 
     top: 0;        
-    z-index: 1;   
+    z-index: 10;   
 
     font-family: 'ClashDisplay-semi';
-    font-size: 60px;
+    font-size: clamp(24px,5vw,60px);
     transition: 0.3s;
 }
 
@@ -288,7 +292,7 @@ button{
     justify-content: center;
     align-items: center;
     color: var(--color-dark);
-    font-size: 80px;
+    font-size: clamp(32px,6vw,80px);
     font-family: 'ClashDisplay-Semi'; 
     
     /* isolation: isolate; */
@@ -297,7 +301,7 @@ button{
 
 
 footer{
-    height: 100vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -455,8 +459,12 @@ footer ul{
 footer .name{
     color: var(--color-dark);
     font-family: 'Panchang-Semi';
-    font-size: 120px;
+    font-size: clamp(48px,10vw,120px);
     margin: 8px;
+}
+
+.end{
+    padding: 2px 2px;
 }
 
 .end p{
@@ -484,3 +492,39 @@ footer .name{
     }
 }
 
+@media (max-width: 600px) {
+    section{
+        flex-direction: column;
+        max-width: 100%;
+    }
+  .heading{
+    width: 100%;
+    background-color: var(--color-dark);
+    justify-content: center;
+
+  }
+
+  .foot{
+    flex-direction: column;
+  }
+
+  .sect , .soc{
+    width: 100%;
+  }
+
+  .flow{
+    padding: 10px 2px;
+  }
+  /* .expertise{
+    display: none;
+} */
+/* .expertise-marquee{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    background-color: var(--color-highlight);
+    color: white;
+} */
+
+}
