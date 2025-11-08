@@ -108,14 +108,11 @@
 }
 
 :root{
+    --teririary-color : rgb(94, 94, 94);
     --color-light : rgb(0, 0, 0);
-    --color-light-tp : rgba(0, 0, 0, 0.61);
     --color-dark : rgb(255, 255, 255);
     --b-color: #cecece;
     --color-highlight : rgb(44, 111, 255);
-    --mobile: 600px;
-    --tablet: 992px;
-    --desktop: 1200px;
 }
 
 html {
@@ -176,6 +173,7 @@ section {
 h1{
     margin: 8px 0px;
     font-family: 'ClashDisplay-Semi';
+    font-size: clamp(16px, 4vh , 36px);
 }
 
 h2{
@@ -459,7 +457,8 @@ footer ul{
 footer .name{
     color: var(--color-dark);
     font-family: 'Panchang-Semi';
-    font-size: clamp(48px,10vw,120px);
+    font-size: clamp(36px , 6vw, 120px);
+    
     margin: 8px;
 }
 

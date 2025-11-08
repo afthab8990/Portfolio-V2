@@ -17,8 +17,7 @@
 }
 
 .c-form {
-  max-width: 500px;
-  padding: 8px 16px;
+  width: 100%;
   text-align: start;
   justify-content: start;
 }

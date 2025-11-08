@@ -68,7 +68,7 @@
 }
 
 .srvc-body{
-    flex: 2;
+    flex: 1.5;
     padding: 4px 8px ;
     width: 40%;
     display: flex;
@@ -86,16 +86,16 @@
     /* font-family:Arial, Helvetica, sans-serif; */
     display: block;
     
-    font-size: 40px;
+    font-size: clamp(16px , 5vw, 40px);
     font-family: 'Switzer-Regular';
     /* mix-blend-mode: difference; */
     
 }
 .srvc-body p{
-    color: var(--color-light);
-    
-    
+    color: var(--teririary-color);
     text-align: justify;
+    margin: 0;
+    font-size: clamp(12px , 3vw, 16px);
     /* mix-blend-mode: difference; */
 
 }
@@ -103,10 +103,12 @@
 @media (max-width: 600px) {
 
   .srvc-dete{
+    padding: 4px 0px;
     flex-direction: column-reverse;
     justify-content: start;
     gap: 8px;
-    margin-top: 1px solid var(--color-sec);
+    border-top: 1px solid var(--b-color);
+
   }
 
   .serv-sec{
@@ -114,6 +116,7 @@
   }
 
   .srvc-body{
+    flex: 1;
     padding: 4px;
     width: 100%;
     

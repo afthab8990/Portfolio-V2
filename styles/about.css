@@ -28,7 +28,7 @@
 }
 
 .punch{
-    font-size: clamp(24px,5vw,60px);
+    font-size: clamp(20px,5vw,60px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,8 +44,19 @@
     display: flex;
     padding: 0px 4px;
     flex-direction: column;
+    
     /* border-top: 2px solid var(--color-light); */
     border-bottom: 2px solid var(--color-light);
+
+}
+
+.exp p , .exp sup{
+    font-size: clamp(12px , 3vw, 16px);
+
+}
+
+.exp h2{
+    font-size: clamp(12px , 3vw, 16px);
 
 }
 
@@ -62,7 +73,7 @@
 }
 
 .exp-year{
-    align-self: flex-end;
+    align-self: center;
 }
 
 .exp-place sup{
@@ -102,7 +113,10 @@
     width: 100%;
 
   }
+  .exp p{
+    margin: 0;
 
+}
 
 }
 /* About End */

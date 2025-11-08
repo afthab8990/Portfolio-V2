@@ -71,7 +71,7 @@
 
 .details .name{
     font-family: 'ClashDisplay-Semi';
-    font-size: clamp(48px , 10vw, 120px);
+    font-size: clamp(36px , 6vw, 120px);
     margin: 8px;
     mix-blend-mode: difference;
     pointer-events: none;
