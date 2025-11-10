@@ -17,7 +17,7 @@
 }
 
 .c-form {
-  width: 100%;
+  max-width: 500px;
   text-align: start;
   justify-content: start;
 }
@@ -81,4 +81,12 @@ input, textarea, .c-form button {
 .c-form button:hover {
      -webkit-animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
     animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+
+@media (max-width: 600px) {
+  .c-form{
+    width: 100%;
+
+  }
 }
