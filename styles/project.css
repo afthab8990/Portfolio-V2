@@ -3,7 +3,6 @@
 
 .projects{
     background-color: var(--color-dark);
-    min-height: 100vh;
     display: flex;
     border: 1px solid var(--b-color);
     border-bottom:none ;
@@ -134,13 +133,13 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 9999;
-    padding: 1rem;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .pro-modal.active {
     display: flex;
+    width: 100%;
     opacity: 1;
     justify-content: center;
     align-items: center;
@@ -152,7 +151,6 @@
     color: var(--color-dark);
     padding: 3rem 2rem 2rem 2rem;
     border-radius: 15px;
-    width: 100%;
     max-width: 500px;
     max-height: 80vh;
     overflow-y: auto;

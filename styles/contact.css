@@ -4,7 +4,6 @@
 .contact{
     background-color: var(--color-dark);
     display: flex;
-    min-height: 100vh;
     align-items: start;
     border: 1px solid var(--b-color);
     border-bottom: none;
