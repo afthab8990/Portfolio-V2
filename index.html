@@ -380,7 +380,7 @@
                     <h4>/Socials</h4>
                     <li><a class="flow" href="https://www.linkedin.com/in/afthab-in/">Linkedin <span>&#8594</span> </a></li>
                     <li><a class="flow" href="https://github.com/afthab8990">Github <span>&#8594</span></a></li>
-                    <li><a class="flow" href="">Mail <span>&#8594</span></a></li>
+                    <li><a id="mailBtn" class="flow" href="">Mail <span>&#8594</span></a></li>
                 </ul>
             </div>
         </div>
@@ -390,6 +390,21 @@
         </div>
     </footer>
 </body>
+<script>
+           const mailBtn = document.getElementById('mailBtn');
+        const emailAddress = 'afthab.pblc@gmail.com';
+        
+        mailBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            navigator.clipboard.writeText(emailAddress).then(function() {
+                alert('Email copied to clipboard!');
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy email');
+            });
+        });
+</script>
 <script src="./JavaScript/pages.js"></script>
 <script src="./JavaScript/project-loader.js"></script>
 <script src="./JavaScript/scroller.js"></script>
