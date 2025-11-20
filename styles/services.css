@@ -71,7 +71,7 @@
     align-items: start;
     justify-content: center;
     font-family: monospace;
-    text-transform: uppercase;
+    
     overflow: hidden;
     color: var(--color-light);
     
@@ -80,7 +80,7 @@
 .srvc-body h1{
     /* font-family:Arial, Helvetica, sans-serif; */
     display: block;
-    
+    text-transform: uppercase;
     font-size: 40px;
     font-family: 'Switzer-Regular';
     /* mix-blend-mode: difference; */
@@ -91,6 +91,7 @@
     
     
     text-align: justify;
+    
     /* mix-blend-mode: difference; */
 
 }
