@@ -52,6 +52,12 @@ proCol.addEventListener('mouseleave', () => {
 
 // Project details data
 const details = {
+     proj : {
+        name : "Project Manager",
+        image : "./images/algorithm.jpg",
+        type : "Web platform",
+        info : "An web platform to create , manage and view current projects in your firm, helping users to navigate and get info about projects the users are assigned to."
+    },
     algo : {
         name : "Algorithm Visualizer",
         type : "Web app",
