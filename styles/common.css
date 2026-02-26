@@ -432,7 +432,7 @@ footer ul{
     width: 100%;
     height: 200%;  
     z-index: -1;    
-    transition: bottom 0.3s ease;
+    transition: bottom 0.3s ease-in;
 }
 
 .str:hover{
